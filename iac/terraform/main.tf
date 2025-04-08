@@ -117,6 +117,7 @@ data "aws_iam_policy_document" "pass4" {
 
      effect = "Deny"
      actions = ["s3:DeleteObject"]
+     name = "lir"
      resources = ["${aws_s3_bucket.migrations.arn}/*"]
    }
 }
